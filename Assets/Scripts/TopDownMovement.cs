@@ -18,10 +18,14 @@ public class TopDownMovement : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Start() //식당의 쉐프가 요리지시를 내림
+    private void Start() //팀이 만들어질때 코스요리에 내가 만들 메뉴를 추가함 이걸 보고 식당의 쉐프가 요리지시를 내림
     {
-        _controller.OnMoveEvent += Move;//코스요리에 Move라는메뉴파트가 포함되어있어서 재료를 줬음
-                                        //OnMoveEvent쉐프가 재료를 주며 Move를 만들라고함
+        _controller.OnMoveEvent += Move;
+
+        //만들메뉴를 코스요리에 추가해놓고 대기타고있기
+        //OnMoveEvent쉐프가 재료가 들어온걸 봄
+        //코스에 Move라는메뉴파트가 포함되어있음
+        //Move메뉴파트에게 재료를 주면서 만들라고함
     }
 
     private void FixedUpdate()//재료손질과 요리파트가 나뉘어있을때 사용
