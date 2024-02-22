@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopupStartMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private InputField inputField;
+    [SerializeField] private Text playerName;
+    public void OnClickJoin()
     {
-        
-    }
+        if (!(2 < inputField.text.Length && inputField.text.Length < 10))
+        {
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playerName.text = inputField.text;
+
+        Destroy(gameObject);
     }
 }
