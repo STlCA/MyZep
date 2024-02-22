@@ -7,6 +7,15 @@ public class PopupStartMenu : MonoBehaviour
 {
     [SerializeField] private InputField inputField;
     [SerializeField] private Text playerName;
+    [SerializeField] private GameObject information;
+    [SerializeField] private GameObject selectCharacter;
+
+    public void OnClickCharacter()
+    {
+        information.SetActive(false);
+        selectCharacter.SetActive(true);
+    }
+
     public void OnClickJoin()
     {
         if (!(2 < inputField.text.Length && inputField.text.Length < 10))
