@@ -16,6 +16,7 @@ public class PlayerInputController : TopDownCharacterController//왜상속?
     {
         Vector2 moveInput = value.Get<Vector2>();//재료
         //왜 value가 아니라 moveInput을 따로 저장하나요?
+        //아 InputValue형을 Vector2로 바꿔주는형인가봄
         Debug.Log(moveInput);
 
         CallMoveEvent(moveInput);//그래서 왜 moveInput을 넘겨주나요 바로 value를 넘겨주면 안되나요?

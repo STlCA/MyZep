@@ -21,7 +21,15 @@ public class TopDownCharacterController : MonoBehaviour
     //가게가 지어질 때 내가 원하는 코스에 대리자지원자를 받아서 쉐프로 임명
     public delegate void OnMoveDel(Vector2 direction);//대리자
     public OnMoveDel OnMoveEvent;//대리자를 쉐프로 임명 = A코스 담당 쉐프
-    
+    //public event OnMoveDel OnMoveEvent; -> event를 붙이면 노예계약같은 느낌
+    //public이여서 다른곳에서 실행이 가능했음
+    //근데 event를 붙이면 얘가 존재하는 이곳에서만 실행이 가능함
+    //물론 메뉴 추가하는건 다른곳에서도 가능함
+
+    //public delegate void OnMoveDel(Vector2 direction);//대리자구하는게 귀찮으면
+    //public event Action<Vector2> OnMoveEvent;로 사용가능 //익명대리자(이름없는대리자)
+    // 위에가 void 반환값이 없으면 Action 반환값이 있으면 Func
+
     public delegate void OnLookDel(Vector2 direction);//대리자2
     public OnLookDel OnLookEvent;//B코스 담당 쉐프
 
