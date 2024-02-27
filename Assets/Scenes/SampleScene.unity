@@ -3042,6 +3042,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb25ea7a02d6834b9f17c44fe902658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterList:
+  - CharacterType: 0
+    CharacterSprite: {fileID: 21300000, guid: 901639f1dddd7b04aa3c943786d274d5, type: 3}
+    AnimatorController: {fileID: 9100000, guid: b0176e43a08bfb44c96907e6f1256cb9, type: 2}
+  - CharacterType: 1
+    CharacterSprite: {fileID: 21300000, guid: 84ce2f114ad12bd4ebafc77060220324, type: 3}
+    AnimatorController: {fileID: 9100000, guid: 3ce0d59e7c9fc524092dd2ce7e5c9beb, type: 2}
+  PlayerAnimator: {fileID: 991242826}
+  PlayerName: {fileID: 981626587}
 --- !u!4 &716403219
 Transform:
   m_ObjectHideFlags: 0
@@ -4640,7 +4649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1091403694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2071848376}
+        m_TargetAssemblyTypeName: PopupStartMenu, Assembly-CSharp
+        m_MethodName: OnClickSelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1091403694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8407,7 +8428,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1884710068}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2071848376}
+        m_TargetAssemblyTypeName: PopupStartMenu, Assembly-CSharp
+        m_MethodName: OnClickSelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1884710068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15184,7 +15217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadd194137829094ab161caca9a3ea32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSprite: {fileID: 1556269509}
   inputField: {fileID: 1274587230}
-  playerName: {fileID: 981626587}
   information: {fileID: 894236827}
   selectCharacter: {fileID: 566538088}
